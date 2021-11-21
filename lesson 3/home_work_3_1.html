@@ -1,0 +1,38 @@
+<script type="text/javascript">
+	'use strict';
+	let number_int = 0;
+console.log("Сделаем при помощи цикла: while");
+	while (number_int <= 10){
+			if (number_int == 0){
+			console.log(number_int + "- это ноль");	
+			number_int++;
+			continue;
+			}
+
+			if (number_int % 2 == 0){
+			  console.log(number_int + "- четное число");
+			}
+			else{
+			console.log(number_int + "- нечетное число");
+			}
+	number_int++;			
+	}
+
+console.log("Сделаем при помощи цикла: for");
+
+for (let i = 0; i<= 10;i++) {
+	        if (i == 0){
+			console.log(i + "- это ноль");	
+			continue;
+			}
+			if (i % 2 == 0){
+			  console.log(i + "- четное число");
+			}
+			else{
+			console.log(i + "- нечетное число");
+			}
+
+}
+
+
+</script>

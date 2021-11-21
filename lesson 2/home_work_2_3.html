@@ -1,0 +1,29 @@
+<script type="text/javascript">
+
+function get(a, b){
+	return Math.abs(a - b);
+}
+
+function product_number(a, b){
+	return Math.abs(a * b );
+}
+
+function summa_number(a, b){
+	return Math.abs(a + b);
+}
+
+let a = -2, b = 4;	
+
+if (a >= 0 && b >= 0){
+
+console.info(get(a, b));
+
+}
+if (a < 0 && b < 0){
+	console.info(product_number(a, b));
+}
+
+if((a < 0 && b >= 0) || (a >= 0 && b < 0)) 
+	console.info(summa_number(a, b));
+
+</script>
