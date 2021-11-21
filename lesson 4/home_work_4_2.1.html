@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>  Личный сайт студента !  </title>
+</head>
+<body>
+	<script type="text/javascript">
+		'use strict';
+   function Post(author, text, date) {
+            this.author = author;
+            this.text = text;
+            this.date = date;
+        }
+
+        Post.prototype.edit = function(text) {
+            this.text = text;
+        }
+
+        const post1 = new Post('Maks', 'privet', new Date());
+        console.log(post1);
+        post1.edit('Mishka');
+        console.log(post1);
+
+
+        function AttachedPost(author, text, date) {
+            Post.call(this, author, text, date);
+            this.highlighted = false;
+        }
+
+        AttachedPost.prototype = Object.create(Post.prototype);
+        AttachedPost.prototype.constructor = AttachedPost;
+
+        AttachedPost.prototype.makeTextHighlighted = function() {
+            this.highlighted = true;
+        }
+
+        const attached_all = new AttachedPost('Rerry', 'privet', new Date());
+        console.log(attached_all);
+        attached_all.makeTextHighlighted();
+        attached_all.edit('Tom and Jerry');
+        console.log(attached_all);
+
+</script>
+
+</body>
+</html>
